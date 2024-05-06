@@ -18,7 +18,7 @@ func createDB() {
 		log.Fatal(err)
 	}
 	//создаем таблицу
-	new_table, err := fileDB.Prepare("CREATE TABLE scheduler (id INTGEER PRIMARY KEY, date CHAR(8), title TEXT, comment TEXT, repeat VARCHAR(128))")
+	new_table, err := fileDB.Prepare("CREATE TABLE scheduler (id INTEGER PRIMARY KEY AUTOINCREMENT, date CHAR(8), title TEXT, comment TEXT, repeat VARCHAR(128))")
 	if err != nil {
 		log.Fatal(err)
 	}
